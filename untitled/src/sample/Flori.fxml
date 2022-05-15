@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TableControl">
+   <children>
+      <TableView fx:id="table" layoutX="66.0" layoutY="100.0" prefHeight="200.0" prefWidth="467.0">
+        <columns>
+          <TableColumn fx:id="Denumire" prefWidth="128.0" text="Denumire" />
+          <TableColumn fx:id="Varsta" prefWidth="85.0" text="Varsta" />
+            <TableColumn fx:id="Cantitate" prefWidth="109.0" text="Cantitate" />
+            <TableColumn fx:id="Tip_vanzare" prefWidth="144.0" text="Tip_vanzare" />
+        </columns>
+      </TableView>
+      <MenuBar layoutX="-1.0" layoutY="-2.0" prefHeight="32.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#includeFlori" text="New" />
+                  <MenuItem mnemonicParsing="false" onAction="#upDataRow" text="Update" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" onAction="#inchidereAplicatie" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="66.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#upDataRow" text="Update" />
+      <Button layoutX="155.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#Dell" text="Delete" />
+   </children>
+</AnchorPane>
